@@ -1,0 +1,44 @@
+<h2>Ng Container example</h2>
+<div>
+  <p>I am main hero of angular</p>
+</div>
+<ng-container *ngFor="let client of clients">
+  <p *ngIf="client.paid">{{client.name}}</p>
+</ng-container>
+<hr />
+
+<ng-template>
+  tempalte
+</ng-template>
+<ng-container>
+  container
+</ng-container>
+<hr />
+<ul>
+  <ng-container *ngFor="let client of clients">
+    <li  *ngIf="client.paid">{{client.name}}</li>
+
+  </ng-container>
+</ul>
+<hr />
+<table border="1">
+  <ng-container *ngFor="let client of clients">
+    <tr *ngIf="client.name">
+      <td>{{client.name}}</td>
+      <td>{{client.money}}</td>
+      <td>{{client.paid}}</td>
+    </tr>
+  </ng-container>
+</table>
+<hr />
+<ng-container *ngIf="clients">
+  clients
+</ng-container>
+<hr />
+<ng-template ngFor let-client  [ngForOf]="clients">
+  <ng-container>
+    <ng-template [ngIf]="client.paid">
+      <p>{{client.name}}</p>
+    </ng-template>
+  </ng-container>
+</ng-template>

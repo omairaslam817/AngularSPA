@@ -1,0 +1,17 @@
+<p>Parent component</p>
+<h6>Ng Life cycle Hook</h6>
+<ul>
+  Life Cycle Hooks Stages
+  <li>NgOnChange</li>
+</ul>
+<p>It is always called ,whenever one of our bound  input changes,i.e Changes occured on those property which are decorated with @Input method</p>
+
+<input #pcomponent (keyup)="0" type="text" />
+<app-child [pData]="pcomponent.value" [artList]="myArt"></app-child>
+<button (click)="addValue()">Add</button>
+<h6>2 Ng Life cycle Hook</h6>
+<ul>
+  Life Cycle Hooks Stages
+  <li>NgOnInit</li>
+</ul>
+<h6>3 Ng Do check cycle Hook</h6>

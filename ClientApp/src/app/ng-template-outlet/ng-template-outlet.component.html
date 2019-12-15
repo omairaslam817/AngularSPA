@@ -1,0 +1,24 @@
+<body>
+
+  <h4>NgTempalteOutlet example</h4>
+  <!--<ng-template #brand let-data let-n="name"></ng-template>-->
+  <!--<ng-template #brand let-name></ng-template>-->
+  <ng-template #brand let-data let-s="size" let-a="alt" let-name>
+    <section>
+      <img src="https://angular.io/assets/images/logos/angular/angular.svg" width={{s}} alt={{a}} />
+      <p>User Name:{{name }}</p>
+    </section>
+  </ng-template>
+  <header>
+    <ng-container *ngTemplateOutlet="brand;context:{name:'omair'}"></ng-container>
+    <h2>Header and NGtempalteOutlet with out implict default value </h2>
+  </header>
+
+
+
+  <footer>
+    <ng-container *ngTemplateOutlet="brand;context:myinfo"></ng-container>
+    <p>This is Footer  and NGtempalteOutlet with default value</p>
+  </footer>
+
+</body>
