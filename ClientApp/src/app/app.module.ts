@@ -28,7 +28,8 @@ import { ChildParentTalkUsingServiceComponent } from './child-parent/child-paren
     NgContainerComponent,
     ParentComponent,
     ChildComponent,
-    ChildParentTalkUsingServiceComponent
+    ChildParentTalkUsingServiceComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
